@@ -147,7 +147,7 @@ function showNotification(message, type = 'info') {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         z-index: 10000;
         animation: slideIn 0.3s ease;
-        font-family: 'Fredoka', sans-serif;
+        font-family: 'Press Start 2P', cursive;
         font-weight: 500;
         max-width: 300px;
     `;

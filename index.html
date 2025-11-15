@@ -26,6 +26,7 @@
                 <li><a href="#data">The Facts</a></li>
                 <li><a href="#game">Play Now</a></li>
             </ul>
+            <button class="edit-mode-toggle" onclick="toggleEditMode()" id="editModeToggle">✏️ Edit Mode</button>
         </div>
     </nav>
 
@@ -100,54 +101,50 @@
             <div class="container">
                 <h2 class="section-title">Common Posture Mistakes (We've All Been There!)</h2>
                 <p class="section-subtitle">Check out these real examples of bad posture - can you spot what's wrong?</p>
-                <div class="examples-grid">
-                    <div class="example-card">
+                <div class="examples-grid" id="examplesGrid">
+                    <div class="example-card" data-example-id="0">
                         <div class="example-image">
-                            <!-- TODO: Replace with your photo! Add your image to images/ folder and update src -->
-                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=500&fit=crop" alt="Slouching at desk" />
-                            <!-- Example: <img src="images/desk-slouch.jpg" alt="Slouching at desk" /> -->
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=500&fit=crop" alt="Slouching at desk" class="example-img" />
                             <div class="badge bad">❌ Bad</div>
+                            <button class="edit-btn" onclick="editExample(0)" style="display: none;">✏️ Edit</button>
                         </div>
-                        <h3>The Desk Slouch</h3>
-                        <p><strong>What's wrong:</strong> Rounded shoulders, forward head, curved back</p>
-                        <p><strong>Why it's bad:</strong> Causes neck strain, back pain, and compressed lungs</p>
-                        <p><strong>Fix it:</strong> Sit with feet flat, back straight, screen at eye level</p>
+                        <h3 class="example-title">The Desk Slouch</h3>
+                        <p class="example-wrong"><strong>What's wrong:</strong> <span class="wrong-text">Rounded shoulders, forward head, curved back</span></p>
+                        <p class="example-why"><strong>Why it's bad:</strong> <span class="why-text">Causes neck strain, back pain, and compressed lungs</span></p>
+                        <p class="example-fix"><strong>Fix it:</strong> <span class="fix-text">Sit with feet flat, back straight, screen at eye level</span></p>
                     </div>
-                    <div class="example-card">
+                    <div class="example-card" data-example-id="1">
                         <div class="example-image">
-                            <!-- TODO: Replace with your photo! Add your image to images/ folder and update src -->
-                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=500&fit=crop" alt="Phone neck" />
-                            <!-- Example: <img src="images/text-neck.jpg" alt="Phone neck" /> -->
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=500&fit=crop" alt="Phone neck" class="example-img" />
                             <div class="badge bad">❌ Bad</div>
+                            <button class="edit-btn" onclick="editExample(1)" style="display: none;">✏️ Edit</button>
                         </div>
-                        <h3>Text Neck</h3>
-                        <p><strong>What's wrong:</strong> Head tilted down, neck bent forward</p>
-                        <p><strong>Why it's bad:</strong> Puts 60 pounds of pressure on your neck! Can cause permanent damage</p>
-                        <p><strong>Fix it:</strong> Hold phone at eye level, take breaks, stretch your neck</p>
+                        <h3 class="example-title">Text Neck</h3>
+                        <p class="example-wrong"><strong>What's wrong:</strong> <span class="wrong-text">Head tilted down, neck bent forward</span></p>
+                        <p class="example-why"><strong>Why it's bad:</strong> <span class="why-text">Puts 60 pounds of pressure on your neck! Can cause permanent damage</span></p>
+                        <p class="example-fix"><strong>Fix it:</strong> <span class="fix-text">Hold phone at eye level, take breaks, stretch your neck</span></p>
                     </div>
-                    <div class="example-card">
+                    <div class="example-card" data-example-id="2">
                         <div class="example-image">
-                            <!-- TODO: Replace with your photo! Add your image to images/ folder and update src -->
-                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=500&fit=crop" alt="Crossed legs" />
-                            <!-- Example: <img src="images/leg-crosser.jpg" alt="Crossed legs" /> -->
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=500&fit=crop" alt="Crossed legs" class="example-img" />
                             <div class="badge bad">❌ Bad</div>
+                            <button class="edit-btn" onclick="editExample(2)" style="display: none;">✏️ Edit</button>
                         </div>
-                        <h3>The Leg Crosser</h3>
-                        <p><strong>What's wrong:</strong> One leg crossed over the other, uneven hips</p>
-                        <p><strong>Why it's bad:</strong> Misaligns your spine and can cause hip and back pain</p>
-                        <p><strong>Fix it:</strong> Keep both feet flat on the floor, switch positions regularly</p>
+                        <h3 class="example-title">The Leg Crosser</h3>
+                        <p class="example-wrong"><strong>What's wrong:</strong> <span class="wrong-text">One leg crossed over the other, uneven hips</span></p>
+                        <p class="example-why"><strong>Why it's bad:</strong> <span class="why-text">Misaligns your spine and can cause hip and back pain</span></p>
+                        <p class="example-fix"><strong>Fix it:</strong> <span class="fix-text">Keep both feet flat on the floor, switch positions regularly</span></p>
                     </div>
-                    <div class="example-card">
+                    <div class="example-card" data-example-id="3">
                         <div class="example-image">
-                            <!-- TODO: Replace with your photo! Add your image to images/ folder and update src -->
-                            <img src="https://images.unsplash.com/photo-1503676260728-1c00e094b736?w=400&h=500&fit=crop" alt="Good posture" />
-                            <!-- Example: <img src="images/good-posture.jpg" alt="Good posture" /> -->
+                            <img src="https://images.unsplash.com/photo-1503676260728-1c00e094b736?w=400&h=500&fit=crop" alt="Good posture" class="example-img" />
                             <div class="badge good">✅ Good</div>
+                            <button class="edit-btn" onclick="editExample(3)" style="display: none;">✏️ Edit</button>
                         </div>
-                        <h3>Perfect Posture!</h3>
-                        <p><strong>What's right:</strong> Straight back, shoulders back, head aligned</p>
-                        <p><strong>Why it's great:</strong> Reduces strain, improves breathing, boosts confidence</p>
-                        <p><strong>Keep it up:</strong> This is what we're aiming for! Your PostureGotchi will love this!</p>
+                        <h3 class="example-title">Perfect Posture!</h3>
+                        <p class="example-wrong"><strong>What's right:</strong> <span class="wrong-text">Straight back, shoulders back, head aligned</span></p>
+                        <p class="example-why"><strong>Why it's great:</strong> <span class="why-text">Reduces strain, improves breathing, boosts confidence</span></p>
+                        <p class="example-fix"><strong>Keep it up:</strong> <span class="fix-text">This is what we're aiming for! Your PostureGotchi will love this!</span></p>
                     </div>
                 </div>
             </div>
@@ -158,45 +155,57 @@
             <div class="container">
                 <h2 class="section-title">Meet Your PostureGotchi Friends!</h2>
                 <p class="section-subtitle">Each character represents a different aspect of good posture. Take care of them by taking care of yourself!</p>
-                <div class="characters-grid">
-                    <div class="character-card">
-                        <div class="character-avatar">🦴</div>
-                        <h3>Spiney</h3>
-                        <p class="character-type">The Spine Guardian</p>
-                        <p>Spiney loves when you keep your back straight! Every time you sit up tall, Spiney gets stronger and shows off with a happy dance.</p>
+                <div class="characters-grid" id="charactersGrid">
+                    <div class="character-card" data-character-id="0">
+                        <div class="character-avatar-container">
+                            <div class="character-avatar">🦴</div>
+                            <button class="edit-btn" onclick="editCharacter(0)" style="display: none;">✏️ Edit</button>
+                        </div>
+                        <h3 class="character-name">Spiney</h3>
+                        <p class="character-type"><span class="character-type-text">The Spine Guardian</span></p>
+                        <p class="character-description">Spiney loves when you keep your back straight! Every time you sit up tall, Spiney gets stronger and shows off with a happy dance.</p>
                         <div class="character-stats">
-                            <span>Health: ⭐⭐⭐⭐⭐</span>
-                            <span>Happiness: ⭐⭐⭐⭐</span>
+                            <span class="health-stat">Health: ⭐⭐⭐⭐⭐</span>
+                            <span class="happiness-stat">Happiness: ⭐⭐⭐⭐</span>
                         </div>
                     </div>
-                    <div class="character-card">
-                        <div class="character-avatar">👁️</div>
-                        <h3>Necky</h3>
-                        <p class="character-type">The Neck Protector</p>
-                        <p>Necky watches out for "text neck"! Keep your head up and your phone at eye level, and Necky will reward you with special powers.</p>
+                    <div class="character-card" data-character-id="1">
+                        <div class="character-avatar-container">
+                            <div class="character-avatar">👁️</div>
+                            <button class="edit-btn" onclick="editCharacter(1)" style="display: none;">✏️ Edit</button>
+                        </div>
+                        <h3 class="character-name">Necky</h3>
+                        <p class="character-type"><span class="character-type-text">The Neck Protector</span></p>
+                        <p class="character-description">Necky watches out for "text neck"! Keep your head up and your phone at eye level, and Necky will reward you with special powers.</p>
                         <div class="character-stats">
-                            <span>Health: ⭐⭐⭐⭐</span>
-                            <span>Happiness: ⭐⭐⭐⭐⭐</span>
+                            <span class="health-stat">Health: ⭐⭐⭐⭐</span>
+                            <span class="happiness-stat">Happiness: ⭐⭐⭐⭐⭐</span>
                         </div>
                     </div>
-                    <div class="character-card">
-                        <div class="character-avatar">💪</div>
-                        <h3>Shoulderz</h3>
-                        <p class="character-type">The Shoulder Squad</p>
-                        <p>Shoulderz hates slouching! Roll your shoulders back and keep them relaxed, and Shoulderz will help you feel more confident.</p>
+                    <div class="character-card" data-character-id="2">
+                        <div class="character-avatar-container">
+                            <div class="character-avatar">💪</div>
+                            <button class="edit-btn" onclick="editCharacter(2)" style="display: none;">✏️ Edit</button>
+                        </div>
+                        <h3 class="character-name">Shoulderz</h3>
+                        <p class="character-type"><span class="character-type-text">The Shoulder Squad</span></p>
+                        <p class="character-description">Shoulderz hates slouching! Roll your shoulders back and keep them relaxed, and Shoulderz will help you feel more confident.</p>
                         <div class="character-stats">
-                            <span>Health: ⭐⭐⭐⭐⭐</span>
-                            <span>Happiness: ⭐⭐⭐</span>
+                            <span class="health-stat">Health: ⭐⭐⭐⭐⭐</span>
+                            <span class="happiness-stat">Happiness: ⭐⭐⭐</span>
                         </div>
                     </div>
-                    <div class="character-card">
-                        <div class="character-avatar">🦵</div>
-                        <h3>Leggy</h3>
-                        <p class="character-type">The Leg Master</p>
-                        <p>Leggy wants your feet flat on the floor! No crossing legs or dangling feet. Keep Leggy happy for better balance and stability.</p>
+                    <div class="character-card" data-character-id="3">
+                        <div class="character-avatar-container">
+                            <div class="character-avatar">🦵</div>
+                            <button class="edit-btn" onclick="editCharacter(3)" style="display: none;">✏️ Edit</button>
+                        </div>
+                        <h3 class="character-name">Leggy</h3>
+                        <p class="character-type"><span class="character-type-text">The Leg Master</span></p>
+                        <p class="character-description">Leggy wants your feet flat on the floor! No crossing legs or dangling feet. Keep Leggy happy for better balance and stability.</p>
                         <div class="character-stats">
-                            <span>Health: ⭐⭐⭐⭐</span>
-                            <span>Happiness: ⭐⭐⭐⭐</span>
+                            <span class="health-stat">Health: ⭐⭐⭐⭐</span>
+                            <span class="happiness-stat">Happiness: ⭐⭐⭐⭐</span>
                         </div>
                     </div>
                 </div>
@@ -312,7 +321,21 @@
         </div>
     </footer>
 
+    <!-- Edit Modals -->
+    <div id="editModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeEditModal()">&times;</span>
+            <h2 id="modalTitle">Edit</h2>
+            <div id="modalBody"></div>
+            <div class="modal-actions">
+                <button class="device-btn" onclick="saveEdit()">Save</button>
+                <button class="device-btn" onclick="closeEditModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script src="editor.js"></script>
 </body>
 </html>
 
