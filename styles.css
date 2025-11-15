@@ -163,14 +163,14 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    padding: 4rem 0;
+    padding: 2rem 0;
     background: transparent;
 }
 
 .hero-content {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
 }
 
@@ -193,8 +193,8 @@ nav a:hover {
 }
 
 .posgotchi-hero-img {
-    width: 700px;
-    height: 700px;
+    width: 550px;
+    height: 550px;
     object-fit: contain;
     animation: wiggle 2s infinite;
 }
@@ -203,6 +203,8 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 @keyframes wiggle {
@@ -1398,8 +1400,8 @@ html {
     }
     
     .posgotchi-hero-img {
-        width: 500px;
-        height: 500px;
+        width: 400px;
+        height: 400px;
     }
     
     .logo {
