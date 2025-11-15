@@ -52,10 +52,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 4rem;
     margin-bottom: 0.5rem;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -67,8 +67,8 @@ header {
 }
 
 .header-char {
-    width: 130px;
-    height: 130px;
+    width: 160px;
+    height: 160px;
     object-fit: contain;
 }
 
@@ -171,20 +171,6 @@ nav a:hover {
     align-items: center;
 }
 
-.tamagotchi-display {
-    display: flex;
-    justify-content: center;
-}
-
-.screen {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: var(--shadow-lg);
-    border: 8px solid #333;
-    max-width: 300px;
-    animation: pulse 3s infinite;
-}
 
 @keyframes pulse {
     0%, 100% { transform: scale(1); }
@@ -204,10 +190,16 @@ nav a:hover {
 }
 
 .posgotchi-hero-img {
-    width: 80px;
-    height: 80px;
+    width: 200px;
+    height: 200px;
     object-fit: contain;
     animation: wiggle 2s infinite;
+}
+
+.tamagotchi-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @keyframes wiggle {
@@ -1398,8 +1390,13 @@ html {
     }
     
     .header-char {
-        width: 90px;
-        height: 90px;
+        width: 120px;
+        height: 120px;
+    }
+    
+    .posgotchi-hero-img {
+        width: 150px;
+        height: 150px;
     }
     
     .game-layout {
