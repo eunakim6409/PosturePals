@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostureGotchi - Fix Your Posture, Level Up Your Life!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">🐾 PostureGotchi 🐾</h1>
+            <p class="tagline">Your Posture Companion for Better Health!</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#why">Why It Matters</a></li>
+                <li><a href="#examples">Bad Posture Examples</a></li>
+                <li><a href="#characters">Meet Your Friends</a></li>
+                <li><a href="#data">The Facts</a></li>
+                <li><a href="#game">Play Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="tamagotchi-display">
+                        <div class="screen">
+                            <div class="character-preview" id="characterPreview">
+                                <div class="pixel-art">🐾</div>
+                            </div>
+                            <div class="stats">
+                                <div class="stat-bar">
+                                    <span>Posture: </span>
+                                    <div class="bar"><div class="fill" style="width: 75%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-text">
+                        <h2>Level Up Your Posture, Level Up Your Life!</h2>
+                        <p>Meet your new digital friend who helps you maintain perfect posture throughout the day. Every time you sit up straight, your PostureGotchi gets stronger and happier!</p>
+                        <button class="cta-button" onclick="scrollToGame()">Start Your Journey</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why It Matters Section -->
+        <section id="why" class="section">
+            <div class="container">
+                <h2 class="section-title">Why Posture Matters (Especially for You!)</h2>
+                <div class="cards-grid">
+                    <div class="info-card">
+                        <div class="card-icon">💪</div>
+                        <h3>Boost Your Confidence</h3>
+                        <p>Good posture makes you look taller, more confident, and ready to take on the world. Studies show people with better posture are perceived as more attractive and self-assured!</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon">🧠</div>
+                        <h3>Improve Your Focus</h3>
+                        <p>Proper alignment helps your brain get more oxygen, which means better concentration during those long study sessions and exams.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon">😊</div>
+                        <h3>Feel Less Pain</h3>
+                        <p>Say goodbye to neck pain, backaches, and headaches! Good posture reduces strain on your muscles and joints, keeping you comfortable all day.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon">⚡</div>
+                        <h3>More Energy</h3>
+                        <p>When your body is aligned correctly, you use less energy just to stay upright. That means more energy for the things you actually want to do!</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon">📚</div>
+                        <h3>Ace Those Tests</h3>
+                        <p>Better posture = better breathing = better brain function. You'll be sharper in class and perform better on tests!</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon">🏃</div>
+                        <h3>Prevent Future Problems</h3>
+                        <p>The habits you form now will stick with you for life. Good posture now means fewer problems later - your future self will thank you!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bad Posture Examples Section -->
+        <section id="examples" class="section dark-section">
+            <div class="container">
+                <h2 class="section-title">Common Posture Mistakes (We've All Been There!)</h2>
+                <p class="section-subtitle">Check out these real examples of bad posture - can you spot what's wrong?</p>
+                <div class="examples-grid">
+                    <div class="example-card">
+                        <div class="example-image">
+                            <!-- TODO: Replace with your photo! Add your image to images/ folder and update src -->
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=500&fit=crop" alt="Slouching at desk" />
+                            <!-- Example: <img src="images/desk-slouch.jpg" alt="Slouching at desk" /> -->
+                            <div class="badge bad">❌ Bad</div>
+                        </div>
+                        <h3>The Desk Slouch</h3>
+                        <p><strong>What's wrong:</strong> Rounded shoulders, forward head, curved back</p>
+                        <p><strong>Why it's bad:</strong> Causes neck strain, back pain, and compressed lungs</p>
+                        <p><strong>Fix it:</strong> Sit with feet flat, back straight, screen at eye level</p>
+                    </div>
+                    <div class="example-card">
+                        <div class="example-image">
+                            <!-- TODO: Replace with your photo! Add your image to images/ folder and update src -->
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=500&fit=crop" alt="Phone neck" />
+                            <!-- Example: <img src="images/text-neck.jpg" alt="Phone neck" /> -->
+                            <div class="badge bad">❌ Bad</div>
+                        </div>
+                        <h3>Text Neck</h3>
+                        <p><strong>What's wrong:</strong> Head tilted down, neck bent forward</p>
+                        <p><strong>Why it's bad:</strong> Puts 60 pounds of pressure on your neck! Can cause permanent damage</p>
+                        <p><strong>Fix it:</strong> Hold phone at eye level, take breaks, stretch your neck</p>
+                    </div>
+                    <div class="example-card">
+                        <div class="example-image">
+                            <!-- TODO: Replace with your photo! Add your image to images/ folder and update src -->
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=500&fit=crop" alt="Crossed legs" />
+                            <!-- Example: <img src="images/leg-crosser.jpg" alt="Crossed legs" /> -->
+                            <div class="badge bad">❌ Bad</div>
+                        </div>
+                        <h3>The Leg Crosser</h3>
+                        <p><strong>What's wrong:</strong> One leg crossed over the other, uneven hips</p>
+                        <p><strong>Why it's bad:</strong> Misaligns your spine and can cause hip and back pain</p>
+                        <p><strong>Fix it:</strong> Keep both feet flat on the floor, switch positions regularly</p>
+                    </div>
+                    <div class="example-card">
+                        <div class="example-image">
+                            <!-- TODO: Replace with your photo! Add your image to images/ folder and update src -->
+                            <img src="https://images.unsplash.com/photo-1503676260728-1c00e094b736?w=400&h=500&fit=crop" alt="Good posture" />
+                            <!-- Example: <img src="images/good-posture.jpg" alt="Good posture" /> -->
+                            <div class="badge good">✅ Good</div>
+                        </div>
+                        <h3>Perfect Posture!</h3>
+                        <p><strong>What's right:</strong> Straight back, shoulders back, head aligned</p>
+                        <p><strong>Why it's great:</strong> Reduces strain, improves breathing, boosts confidence</p>
+                        <p><strong>Keep it up:</strong> This is what we're aiming for! Your PostureGotchi will love this!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Characters Section -->
+        <section id="characters" class="section">
+            <div class="container">
+                <h2 class="section-title">Meet Your PostureGotchi Friends!</h2>
+                <p class="section-subtitle">Each character represents a different aspect of good posture. Take care of them by taking care of yourself!</p>
+                <div class="characters-grid">
+                    <div class="character-card">
+                        <div class="character-avatar">🦴</div>
+                        <h3>Spiney</h3>
+                        <p class="character-type">The Spine Guardian</p>
+                        <p>Spiney loves when you keep your back straight! Every time you sit up tall, Spiney gets stronger and shows off with a happy dance.</p>
+                        <div class="character-stats">
+                            <span>Health: ⭐⭐⭐⭐⭐</span>
+                            <span>Happiness: ⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                    <div class="character-card">
+                        <div class="character-avatar">👁️</div>
+                        <h3>Necky</h3>
+                        <p class="character-type">The Neck Protector</p>
+                        <p>Necky watches out for "text neck"! Keep your head up and your phone at eye level, and Necky will reward you with special powers.</p>
+                        <div class="character-stats">
+                            <span>Health: ⭐⭐⭐⭐</span>
+                            <span>Happiness: ⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                    <div class="character-card">
+                        <div class="character-avatar">💪</div>
+                        <h3>Shoulderz</h3>
+                        <p class="character-type">The Shoulder Squad</p>
+                        <p>Shoulderz hates slouching! Roll your shoulders back and keep them relaxed, and Shoulderz will help you feel more confident.</p>
+                        <div class="character-stats">
+                            <span>Health: ⭐⭐⭐⭐⭐</span>
+                            <span>Happiness: ⭐⭐⭐</span>
+                        </div>
+                    </div>
+                    <div class="character-card">
+                        <div class="character-avatar">🦵</div>
+                        <h3>Leggy</h3>
+                        <p class="character-type">The Leg Master</p>
+                        <p>Leggy wants your feet flat on the floor! No crossing legs or dangling feet. Keep Leggy happy for better balance and stability.</p>
+                        <div class="character-stats">
+                            <span>Health: ⭐⭐⭐⭐</span>
+                            <span>Happiness: ⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Points Section -->
+        <section id="data" class="section dark-section">
+            <div class="container">
+                <h2 class="section-title">The Science Behind Posture</h2>
+                <p class="section-subtitle">Real data that shows why posture correction matters</p>
+                <div class="data-grid">
+                    <div class="data-card">
+                        <div class="data-number">60</div>
+                        <div class="data-unit">lbs</div>
+                        <p class="data-description">The extra pressure on your neck when you tilt your head forward just 15 degrees (text neck position)</p>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-number">80%</div>
+                        <p class="data-description">Of high school students report experiencing back or neck pain, often due to poor posture</p>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-number">7</div>
+                        <div class="data-unit">hours/day</div>
+                        <p class="data-description">Average time teens spend sitting - that's a lot of time to develop bad habits!</p>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-number">30%</div>
+                        <p class="data-description">Increase in lung capacity when you maintain good posture - more oxygen = better brain function!</p>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-number">2x</div>
+                        <p class="data-description">People with good posture are perceived as twice as confident and attractive</p>
+                    </div>
+                    <div class="data-card">
+                        <div class="data-number">15</div>
+                        <div class="data-unit">minutes</div>
+                        <p class="data-description">Just 15 minutes of posture correction exercises daily can prevent long-term problems</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Section -->
+        <section id="game" class="section">
+            <div class="container">
+                <h2 class="section-title">Play PostureGotchi Now!</h2>
+                <div class="game-container">
+                    <div class="tamagotchi-device">
+                        <div class="device-screen">
+                            <div class="character-display" id="characterDisplay">
+                                <div class="pixel-character">🐾</div>
+                            </div>
+                            <div class="device-stats">
+                                <div class="device-stat">
+                                    <span>Hunger</span>
+                                    <div class="stat-bar-small">
+                                        <div class="fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div class="device-stat">
+                                    <span>Happiness</span>
+                                    <div class="stat-bar-small">
+                                        <div class="fill" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="device-stat">
+                                    <span>Posture</span>
+                                    <div class="stat-bar-small">
+                                        <div class="fill" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="device-message" id="deviceMessage">
+                                "Sit up straight! I'm watching! 🐾"
+                            </div>
+                        </div>
+                        <div class="device-buttons">
+                            <button class="device-btn" onclick="feedCharacter()">Feed</button>
+                            <button class="device-btn" onclick="playWithCharacter()">Play</button>
+                            <button class="device-btn" onclick="checkPosture()">Check</button>
+                            <button class="device-btn" onclick="cleanCharacter()">Clean</button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>How to Play</h3>
+                        <ul class="game-instructions">
+                            <li>📱 <strong>Feed:</strong> Give your PostureGotchi energy by maintaining good posture</li>
+                            <li>🎮 <strong>Play:</strong> Take posture breaks and stretch to keep them happy</li>
+                            <li>✅ <strong>Check:</strong> Verify your posture is correct - your character will celebrate!</li>
+                            <li>🧹 <strong>Clean:</strong> Reset bad habits and start fresh</li>
+                        </ul>
+                        <div class="posture-tips">
+                            <h4>Quick Posture Checklist:</h4>
+                            <ul>
+                                <li>✓ Feet flat on the floor</li>
+                                <li>✓ Back straight against chair</li>
+                                <li>✓ Shoulders relaxed and back</li>
+                                <li>✓ Head aligned with spine</li>
+                                <li>✓ Screen at eye level</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PostureGotchi - Level Up Your Posture, Level Up Your Life!</p>
+            <p class="footer-note">Made with ❤️ for high school students everywhere</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
