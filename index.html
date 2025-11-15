@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PostureGotchi - Fix Your Posture, Level Up Your Life!</title>
+    <title>PosGotchi - Fix Your Posture, Level Up Your Life!</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1 class="logo">🐾 PostureGotchi 🐾</h1>
+            <h1 class="logo">PosGotchi</h1>
             <p class="tagline">Your Posture Companion for Better Health!</p>
         </div>
     </header>
@@ -26,7 +26,6 @@
                 <li><a href="#data">The Facts</a></li>
                 <li><a href="#game">Play Now</a></li>
             </ul>
-            <button class="edit-mode-toggle" onclick="toggleEditMode()" id="editModeToggle">✏️ Edit Mode</button>
         </div>
     </nav>
 
@@ -38,7 +37,7 @@
                     <div class="tamagotchi-display">
                         <div class="screen">
                             <div class="character-preview" id="characterPreview">
-                                <div class="pixel-art">🐾</div>
+                                <div class="pixel-art">✨</div>
                             </div>
                             <div class="stats">
                                 <div class="stat-bar">
@@ -153,17 +152,15 @@
         <!-- Characters Section -->
         <section id="characters" class="section">
             <div class="container">
-                <h2 class="section-title">Meet Your PostureGotchi Friends!</h2>
+                <h2 class="section-title">Meet Your PosturePals!</h2>
                 <p class="section-subtitle">Each character represents a different aspect of good posture. Take care of them by taking care of yourself!</p>
                 <div class="characters-grid" id="charactersGrid">
                     <div class="character-card" data-character-id="0">
                         <div class="character-avatar-container">
-                            <div class="character-avatar">🦴</div>
-                            <button class="edit-btn" onclick="editCharacter(0)" style="display: none;">✏️ Edit</button>
+                            <img src="images/dinosaur.png" alt="Dino Nino" class="character-image" />
                         </div>
-                        <h3 class="character-name">Spiney</h3>
-                        <p class="character-type"><span class="character-type-text">The Spine Guardian</span></p>
-                        <p class="character-description">Spiney loves when you keep your back straight! Every time you sit up tall, Spiney gets stronger and shows off with a happy dance.</p>
+                        <h3 class="character-name">Dino Nino</h3>
+                        <p class="character-description">Dino Nino is fascinated about spines and often visits the dino doctor to take care of his long spine</p>
                         <div class="character-stats">
                             <span class="health-stat">Health: ⭐⭐⭐⭐⭐</span>
                             <span class="happiness-stat">Happiness: ⭐⭐⭐⭐</span>
@@ -171,12 +168,10 @@
                     </div>
                     <div class="character-card" data-character-id="1">
                         <div class="character-avatar-container">
-                            <div class="character-avatar">👁️</div>
-                            <button class="edit-btn" onclick="editCharacter(1)" style="display: none;">✏️ Edit</button>
+                            <img src="images/axolotl.png" alt="Lotty Axolotl" class="character-image" />
                         </div>
-                        <h3 class="character-name">Necky</h3>
-                        <p class="character-type"><span class="character-type-text">The Neck Protector</span></p>
-                        <p class="character-description">Necky watches out for "text neck"! Keep your head up and your phone at eye level, and Necky will reward you with special powers.</p>
+                        <h3 class="character-name">Lotty Axolotl</h3>
+                        <p class="character-description">Lotty Axolotl loves a long bath to relieve their muscles after a long day of working with bad posture</p>
                         <div class="character-stats">
                             <span class="health-stat">Health: ⭐⭐⭐⭐</span>
                             <span class="happiness-stat">Happiness: ⭐⭐⭐⭐⭐</span>
@@ -184,28 +179,24 @@
                     </div>
                     <div class="character-card" data-character-id="2">
                         <div class="character-avatar-container">
-                            <div class="character-avatar">💪</div>
-                            <button class="edit-btn" onclick="editCharacter(2)" style="display: none;">✏️ Edit</button>
+                            <img src="images/chicken.png" alt="Chick Peep" class="character-image" />
                         </div>
-                        <h3 class="character-name">Shoulderz</h3>
-                        <p class="character-type"><span class="character-type-text">The Shoulder Squad</span></p>
-                        <p class="character-description">Shoulderz hates slouching! Roll your shoulders back and keep them relaxed, and Shoulderz will help you feel more confident.</p>
+                        <h3 class="character-name">Chick Peep</h3>
+                        <p class="character-description">Chick Peep is a self-care guru who cares a lot about their posture!</p>
                         <div class="character-stats">
                             <span class="health-stat">Health: ⭐⭐⭐⭐⭐</span>
-                            <span class="happiness-stat">Happiness: ⭐⭐⭐</span>
+                            <span class="happiness-stat">Happiness: ⭐⭐⭐⭐</span>
                         </div>
                     </div>
                     <div class="character-card" data-character-id="3">
                         <div class="character-avatar-container">
-                            <div class="character-avatar">🦵</div>
-                            <button class="edit-btn" onclick="editCharacter(3)" style="display: none;">✏️ Edit</button>
+                            <img src="images/dog.png" alt="Cup Pup" class="character-image" />
                         </div>
-                        <h3 class="character-name">Leggy</h3>
-                        <p class="character-type"><span class="character-type-text">The Leg Master</span></p>
-                        <p class="character-description">Leggy wants your feet flat on the floor! No crossing legs or dangling feet. Keep Leggy happy for better balance and stability.</p>
+                        <h3 class="character-name">Cup Pup</h3>
+                        <p class="character-description">Cup Pup is unaware of their posture but is willing to change it</p>
                         <div class="character-stats">
                             <span class="health-stat">Health: ⭐⭐⭐⭐</span>
-                            <span class="happiness-stat">Happiness: ⭐⭐⭐⭐</span>
+                            <span class="happiness-stat">Happiness: ⭐⭐⭐⭐⭐</span>
                         </div>
                     </div>
                 </div>

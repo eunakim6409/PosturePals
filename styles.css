@@ -20,15 +20,12 @@
 }
 
 body {
-    font-family: 'VT323', monospace;
+    font-family: 'Nunito', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background: #f5f5f5;
+    background: linear-gradient(135deg, #a8e6cf 0%, #ffd3e1 50%, #ffaaa5 100%);
     background-attachment: fixed;
-    font-size: 22px;
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
+    font-size: 18px;
 }
 
 .container {
@@ -51,6 +48,7 @@ header {
 }
 
 .logo {
+    font-family: 'VT323', monospace;
     font-size: 3.5rem;
     font-weight: normal;
     margin-bottom: 0.5rem;
@@ -65,6 +63,7 @@ header {
 }
 
 .tagline {
+    font-family: 'VT323', monospace;
     font-size: 1.5rem;
     opacity: 0.95;
     letter-spacing: 2px;
@@ -94,14 +93,15 @@ nav ul {
 }
 
 nav a {
+    font-family: 'Nunito', sans-serif;
     color: var(--text-dark);
     text-decoration: none;
-    font-weight: normal;
+    font-weight: 600;
     padding: 0.5rem 1rem;
     border-radius: 0;
     transition: all 0.3s ease;
-    font-size: 1.3rem;
-    letter-spacing: 1px;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
     border: 2px solid transparent;
 }
 
@@ -192,6 +192,7 @@ nav a:hover {
 }
 
 .hero-text h2 {
+    font-family: 'VT323', monospace;
     font-size: 2.2rem;
     color: var(--text-dark);
     margin-bottom: 1rem;
@@ -200,11 +201,12 @@ nav a:hover {
 }
 
 .hero-text p {
-    font-size: 1.3rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
     margin-bottom: 2rem;
     color: #333;
     line-height: 1.6;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .cta-button {
@@ -239,6 +241,7 @@ nav a:hover {
 }
 
 .section-title {
+    font-family: 'VT323', monospace;
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 1rem;
@@ -248,6 +251,7 @@ nav a:hover {
 }
 
 .section-subtitle {
+    font-family: 'VT323', monospace;
     text-align: center;
     font-size: 1.4rem;
     margin-bottom: 3rem;
@@ -285,6 +289,7 @@ nav a:hover {
 }
 
 .info-card h3 {
+    font-family: 'VT323', monospace;
     color: #4a90e2;
     margin-bottom: 1rem;
     font-size: 1.8rem;
@@ -293,10 +298,11 @@ nav a:hover {
 }
 
 .info-card p {
+    font-family: 'Nunito', sans-serif;
     color: #333;
     line-height: 1.6;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
 }
 
 .dark-section .info-card {
@@ -371,6 +377,7 @@ nav a:hover {
 }
 
 .example-card h3 {
+    font-family: 'VT323', monospace;
     padding: 1rem 1.5rem 0.5rem;
     color: #4a90e2;
     font-size: 1.6rem;
@@ -379,12 +386,13 @@ nav a:hover {
 }
 
 .example-card p {
+    font-family: 'Nunito', sans-serif;
     padding: 0 1.5rem;
     margin-bottom: 0.5rem;
     color: #333;
     line-height: 1.6;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
 }
 
 .example-card p:last-child {
@@ -439,6 +447,7 @@ nav a:hover {
 }
 
 .character-card h3 {
+    font-family: 'VT323', monospace;
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
     letter-spacing: 2px;
@@ -453,18 +462,20 @@ nav a:hover {
 }
 
 .character-card p {
+    font-family: 'Nunito', sans-serif;
     margin-bottom: 1rem;
     line-height: 1.6;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
 }
 
 .character-stats {
+    font-family: 'Nunito', sans-serif;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
 }
 
 /* Data Grid */
@@ -491,6 +502,7 @@ nav a:hover {
 }
 
 .data-number {
+    font-family: 'VT323', monospace;
     font-size: 3.5rem;
     font-weight: normal;
     color: #ffd700;
@@ -499,6 +511,7 @@ nav a:hover {
 }
 
 .data-unit {
+    font-family: 'VT323', monospace;
     font-size: 1.3rem;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 1rem;
@@ -506,10 +519,11 @@ nav a:hover {
 }
 
 .data-description {
-    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.95);
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 /* Game Section */
@@ -634,6 +648,7 @@ nav a:hover {
 }
 
 .game-info h3 {
+    font-family: 'VT323', monospace;
     color: #4a90e2;
     margin-bottom: 1rem;
     font-size: 1.8rem;
@@ -646,12 +661,13 @@ nav a:hover {
 }
 
 .game-instructions li {
+    font-family: 'Nunito', sans-serif;
     padding: 0.8rem 0;
     border-bottom: 2px solid #ddd;
     color: #333;
     line-height: 1.6;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
 }
 
 .posture-tips {
@@ -661,6 +677,7 @@ nav a:hover {
 }
 
 .posture-tips h4 {
+    font-family: 'VT323', monospace;
     color: #4a90e2;
     margin-bottom: 1rem;
     font-size: 1.5rem;
@@ -672,28 +689,31 @@ nav a:hover {
 }
 
 .posture-tips li {
+    font-family: 'Nunito', sans-serif;
     padding: 0.5rem 0;
     color: #333;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
     line-height: 1.6;
 }
 
 /* Footer */
 footer {
+    font-family: 'Nunito', sans-serif;
     background: #2c3e50;
     color: var(--text-light);
     text-align: center;
     padding: 2rem 0;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
     line-height: 1.6;
 }
 
 .footer-note {
+    font-family: 'Nunito', sans-serif;
     margin-top: 0.5rem;
     opacity: 0.8;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
 }
 
 /* Responsive Design */
@@ -735,54 +755,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Edit Mode Styles */
-.edit-mode-toggle {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: var(--primary-purple);
-    color: white;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 0;
-    cursor: pointer;
-    font-family: 'VT323', monospace;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow);
-}
-
-.edit-mode-toggle:hover {
-    transform: translateY(-50%) scale(1.05);
-    box-shadow: var(--shadow-lg);
-}
-
-.edit-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: var(--primary-yellow);
-    color: var(--text-dark);
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    cursor: pointer;
-    font-family: 'VT323', monospace;
-    font-size: 0.5rem;
-    letter-spacing: 0.5px;
-    z-index: 10;
-    box-shadow: var(--shadow);
-    transition: all 0.3s ease;
-}
-
-.edit-btn:hover {
-    background: #4a90e2;
-    color: white;
-    transform: translate(1px, 1px);
-    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
-}
 
 .character-avatar-container {
     position: relative;
@@ -906,12 +878,12 @@ html {
 }
 
 /* Character Avatar Image Support */
-.character-avatar img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 3px solid rgba(255, 255, 255, 0.3);
+.character-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border: none;
+    background: transparent;
 }
 
 /* Responsive Modal */
@@ -920,13 +892,6 @@ html {
         width: 95%;
         margin: 10% auto;
         padding: 1.5rem;
-    }
-    
-    .edit-mode-toggle {
-        position: static;
-        transform: none;
-        margin-top: 1rem;
-        width: 100%;
     }
     
     nav {
