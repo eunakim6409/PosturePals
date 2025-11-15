@@ -53,7 +53,7 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0;
     width: 100%;
     max-width: 1200px;
     margin-left: auto;
@@ -110,10 +110,10 @@ header {
 
 .tagline {
     font-family: 'VT323', monospace;
-    font-size: 1rem;
+    font-size: 1.3rem;
     opacity: 0.95;
     letter-spacing: 1px;
-    margin-top: 0.2rem;
+    margin-top: 0;
     line-height: 1.2;
 }
 
@@ -466,8 +466,8 @@ nav a:hover {
 /* Characters Grid */
 .characters-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
     margin-top: 2rem;
 }
 
@@ -966,8 +966,8 @@ html {
 
 .selection-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
     margin-top: 2rem;
 }
 
