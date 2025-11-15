@@ -38,7 +38,7 @@ body {
 header {
     background: rgba(168, 230, 207, 0.9);
     color: var(--text-dark);
-    padding: 0.8rem 0;
+    padding: 0.4rem 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: sticky;
@@ -53,7 +53,7 @@ header {
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
     width: 100%;
     max-width: 1200px;
     margin-left: auto;
@@ -94,12 +94,13 @@ header {
 
 .logo {
     font-family: 'VT323', monospace;
-    font-size: 5rem;
+    font-size: 3.5rem;
     font-weight: normal;
     text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
     animation: bounce 2s infinite;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     margin: 0;
+    line-height: 1;
 }
 
 @keyframes bounce {
@@ -109,9 +110,11 @@ header {
 
 .tagline {
     font-family: 'VT323', monospace;
-    font-size: 1.5rem;
+    font-size: 1rem;
     opacity: 0.95;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    margin-top: 0.2rem;
+    line-height: 1.2;
 }
 
 /* Navigation */
@@ -120,7 +123,7 @@ nav {
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
-    top: 70px;
+    top: 50px;
     z-index: 999;
     border-bottom: 2px solid rgba(255, 170, 165, 0.5);
     backdrop-filter: blur(5px);
@@ -190,8 +193,8 @@ nav a:hover {
 }
 
 .posgotchi-hero-img {
-    width: 350px;
-    height: 350px;
+    width: 700px;
+    height: 700px;
     object-fit: contain;
     animation: wiggle 2s infinite;
 }
@@ -1395,12 +1398,16 @@ html {
     }
     
     .posgotchi-hero-img {
-        width: 250px;
-        height: 250px;
+        width: 500px;
+        height: 500px;
     }
     
     .logo {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+    
+    .tagline {
+        font-size: 0.9rem;
     }
     
     .game-layout {
