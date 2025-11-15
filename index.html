@@ -46,7 +46,7 @@
                     <div class="tamagotchi-display">
                         <div class="screen">
                             <div class="character-preview" id="characterPreview">
-                                <div class="pixel-art">✨</div>
+                                <img src="images/posgotchi.png" alt="PosGotchi" class="posgotchi-hero-img" />
                             </div>
                             <div class="stats">
                                 <div class="stat-bar">
@@ -142,25 +142,30 @@
                         <div class="game-content">
                             <div class="posture-checklist">
                                 <h3>Posture Checklist</h3>
-                                <div class="checklist-item">
+                                <div class="checklist-item" onclick="toggleCheckbox('check1')">
                                     <input type="checkbox" id="check1" onchange="updatePostureScore()">
                                     <label for="check1">Feet flat on the floor</label>
+                                    <span class="check-animation"></span>
                                 </div>
-                                <div class="checklist-item">
+                                <div class="checklist-item" onclick="toggleCheckbox('check2')">
                                     <input type="checkbox" id="check2" onchange="updatePostureScore()">
                                     <label for="check2">Back straight against chair</label>
+                                    <span class="check-animation"></span>
                                 </div>
-                                <div class="checklist-item">
+                                <div class="checklist-item" onclick="toggleCheckbox('check3')">
                                     <input type="checkbox" id="check3" onchange="updatePostureScore()">
                                     <label for="check3">Shoulders relaxed and back</label>
+                                    <span class="check-animation"></span>
                                 </div>
-                                <div class="checklist-item">
+                                <div class="checklist-item" onclick="toggleCheckbox('check4')">
                                     <input type="checkbox" id="check4" onchange="updatePostureScore()">
                                     <label for="check4">Head aligned with spine</label>
+                                    <span class="check-animation"></span>
                                 </div>
-                                <div class="checklist-item">
+                                <div class="checklist-item" onclick="toggleCheckbox('check5')">
                                     <input type="checkbox" id="check5" onchange="updatePostureScore()">
                                     <label for="check5">Screen at eye level</label>
+                                    <span class="check-animation"></span>
                                 </div>
                             </div>
                             <div class="posture-score">
@@ -172,6 +177,31 @@
                                     </div>
                                 </div>
                                 <p id="postureMessage" class="posture-message">Check off the items above to improve your posture score!</p>
+                            </div>
+                            <div class="posture-timer">
+                                <h3>Posture Break Timer</h3>
+                                <div class="timer-display">
+                                    <div class="timer-circle">
+                                        <div class="timer-text" id="timerText">30:00</div>
+                                        <div class="timer-label">Next Break</div>
+                                    </div>
+                                </div>
+                                <button class="timer-button" onclick="startPostureTimer()" id="timerButton">Start Timer</button>
+                                <button class="timer-button" onclick="resetPostureTimer()" id="resetTimerButton" style="display: none;">Reset</button>
+                                <p id="timerMessage" class="timer-message">Click to start a 30-minute posture break reminder!</p>
+                            </div>
+                            <div class="posture-challenge">
+                                <h3>Daily Challenge</h3>
+                                <div class="challenge-content">
+                                    <p id="challengeText" class="challenge-text">Complete all 5 checklist items to unlock today's challenge!</p>
+                                    <button class="challenge-button" id="challengeButton" onclick="startChallenge()" style="display: none;">Start Challenge</button>
+                                    <div id="challengeProgress" class="challenge-progress" style="display: none;">
+                                        <p>Challenge: <span id="challengeGoal"></span></p>
+                                        <div class="challenge-bar-container">
+                                            <div class="challenge-bar" id="challengeBar"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="posture-tips-game">
                                 <h3>Quick Tips</h3>

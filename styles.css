@@ -67,8 +67,8 @@ header {
 }
 
 .header-char {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     object-fit: contain;
 }
 
@@ -203,8 +203,10 @@ nav a:hover {
     justify-content: center;
 }
 
-.pixel-art {
-    font-size: 5rem;
+.posgotchi-hero-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
     animation: wiggle 2s infinite;
 }
 
@@ -973,7 +975,7 @@ html {
 }
 
 .selectable-character {
-    background: rgba(255, 255, 255, 0.1);
+    background: #ffffff;
     padding: 2rem;
     border-radius: 0;
     text-align: center;
@@ -984,7 +986,7 @@ html {
 
 .selectable-character:hover {
     transform: translateY(-10px) scale(1.05);
-    background: rgba(255, 255, 255, 0.2);
+    background: #ffffff;
     border-color: #ffd700;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
@@ -1000,8 +1002,9 @@ html {
 .selectable-character h3 {
     font-family: 'VT323', monospace;
     font-size: 1.5rem;
-    color: var(--text-light);
+    color: var(--text-dark);
     letter-spacing: 2px;
+    margin-top: 1rem;
 }
 
 .game-interface {
@@ -1017,7 +1020,7 @@ html {
 
 .game-character-display {
     text-align: center;
-    background: rgba(255, 255, 255, 0.1);
+    background: #ffffff;
     padding: 2rem;
     border-radius: 0;
     border: 3px solid rgba(255, 255, 255, 0.3);
@@ -1066,6 +1069,38 @@ html {
     padding: 0.8rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.checklist-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.checklist-item input[type="checkbox"]:checked + label {
+    color: #ffd700;
+    font-weight: 600;
+}
+
+.check-animation {
+    position: absolute;
+    right: 1rem;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.checklist-item input[type="checkbox"]:checked ~ .check-animation {
+    opacity: 1;
+    animation: checkPop 0.5s ease;
+}
+
+@keyframes checkPop {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
 }
 
 .checklist-item input[type="checkbox"] {
@@ -1189,6 +1224,153 @@ html {
     transform: translateY(-2px);
 }
 
+/* Posture Timer Styles */
+.posture-timer {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 0;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+.posture-timer h3 {
+    font-family: 'VT323', monospace;
+    font-size: 1.8rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.timer-display {
+    margin: 2rem 0;
+}
+
+.timer-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #ffd700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.timer-text {
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    color: #ffd700;
+    letter-spacing: 2px;
+}
+
+.timer-label {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+}
+
+.timer-button {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-light);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-family: 'VT323', monospace;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 0;
+    margin: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.timer-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: #ffd700;
+    transform: translateY(-2px);
+}
+
+.timer-message {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+/* Posture Challenge Styles */
+.posture-challenge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 0;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.posture-challenge h3 {
+    font-family: 'VT323', monospace;
+    font-size: 1.8rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.challenge-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.challenge-button {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-light);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-family: 'VT323', monospace;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.challenge-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: #ffd700;
+    transform: translateY(-2px);
+}
+
+.challenge-progress {
+    margin-top: 1rem;
+}
+
+.challenge-progress p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.challenge-bar-container {
+    width: 100%;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+.challenge-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #ffd700, #ff6b9d);
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
 /* Responsive Modal */
 @media (max-width: 768px) {
     .modal-content {
@@ -1216,8 +1398,12 @@ html {
     }
     
     .header-char {
-        width: 70px;
-        height: 70px;
+        width: 90px;
+        height: 90px;
+    }
+    
+    .game-layout {
+        grid-template-columns: 1fr;
     }
 }
 

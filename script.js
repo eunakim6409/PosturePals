@@ -224,6 +224,12 @@ function selectCharacter(charType, charName) {
     document.getElementById('gameInterface').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+function toggleCheckbox(checkId) {
+    const checkbox = document.getElementById(checkId);
+    checkbox.checked = !checkbox.checked;
+    updatePostureScore();
+}
+
 function updatePostureScore() {
     let checkedCount = 0;
     for (let i = 1; i <= 5; i++) {
@@ -236,6 +242,8 @@ function updatePostureScore() {
     const scoreEl = document.getElementById('postureScore');
     const scoreBar = document.getElementById('scoreBar');
     const messageEl = document.getElementById('postureMessage');
+    const challengeButton = document.getElementById('challengeButton');
+    const challengeText = document.getElementById('challengeText');
     
     scoreEl.textContent = Math.round(score) + '%';
     scoreBar.style.width = score + '%';
@@ -249,6 +257,16 @@ function updatePostureScore() {
         messageEl.textContent = 'Great job! Almost perfect posture! ⭐';
     } else {
         messageEl.textContent = 'Perfect! Your posture is amazing! Your PosturePal is so happy! 🌟';
+        // Unlock challenge when all items are checked
+        if (challengeButton && challengeButton.style.display === 'none') {
+            challengeButton.style.display = 'block';
+            challengeText.textContent = 'Amazing! You\'ve unlocked today\'s challenge! Click below to start!';
+        }
+    }
+    
+    // Track challenge progress if active
+    if (typeof window.trackChallengeProgress === 'function') {
+        window.trackChallengeProgress();
     }
 }
 
@@ -262,9 +280,156 @@ function resetGame() {
         document.getElementById(`check${i}`).checked = false;
     }
     
+    // Reset timer
+    resetPostureTimer();
+    
+    // Reset challenge
+    const challengeButton = document.getElementById('challengeButton');
+    const challengeProgress = document.getElementById('challengeProgress');
+    const challengeText = document.getElementById('challengeText');
+    if (challengeButton) challengeButton.style.display = 'none';
+    if (challengeProgress) challengeProgress.style.display = 'none';
+    if (challengeText) challengeText.textContent = 'Complete all 5 checklist items to unlock today\'s challenge!';
+    
     // Scroll to selection
     document.getElementById('characterSelection').scrollIntoView({ behavior: 'smooth' });
 }
+
+// Posture Timer Functions
+let timerInterval = null;
+let timerSeconds = 30 * 60; // 30 minutes in seconds
+
+function startPostureTimer() {
+    if (timerInterval) {
+        clearInterval(timerInterval);
+    }
+    
+    const timerButton = document.getElementById('timerButton');
+    const resetButton = document.getElementById('resetTimerButton');
+    const timerMessage = document.getElementById('timerMessage');
+    
+    timerButton.style.display = 'none';
+    resetButton.style.display = 'inline-block';
+    timerMessage.textContent = 'Timer is running! Take a break when it reaches 0:00';
+    
+    timerInterval = setInterval(() => {
+        timerSeconds--;
+        
+        const minutes = Math.floor(timerSeconds / 60);
+        const seconds = timerSeconds % 60;
+        const timerText = document.getElementById('timerText');
+        timerText.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        
+        if (timerSeconds <= 0) {
+            clearInterval(timerInterval);
+            timerInterval = null;
+            timerText.textContent = '00:00';
+            timerMessage.textContent = '⏰ Time for a posture break! Stand up, stretch, and move around!';
+            timerMessage.style.color = '#ffd700';
+            timerMessage.style.fontWeight = 'bold';
+            
+            // Show notification
+            if (Notification.permission === 'granted') {
+                new Notification('Posture Break Time!', {
+                    body: 'Take a break and stretch! Your PosturePal needs you!',
+                    icon: 'images/posgotchi.png'
+                });
+            }
+            
+            // Reset timer after 5 seconds
+            setTimeout(() => {
+                resetPostureTimer();
+            }, 5000);
+        }
+    }, 1000);
+}
+
+function resetPostureTimer() {
+    if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+    
+    timerSeconds = 30 * 60;
+    const timerText = document.getElementById('timerText');
+    const timerButton = document.getElementById('timerButton');
+    const resetButton = document.getElementById('resetTimerButton');
+    const timerMessage = document.getElementById('timerMessage');
+    
+    if (timerText) timerText.textContent = '30:00';
+    if (timerButton) timerButton.style.display = 'inline-block';
+    if (resetButton) resetButton.style.display = 'none';
+    if (timerMessage) {
+        timerMessage.textContent = 'Click to start a 30-minute posture break reminder!';
+        timerMessage.style.color = '';
+        timerMessage.style.fontWeight = '';
+    }
+}
+
+// Request notification permission on page load
+if ('Notification' in window && Notification.permission === 'default') {
+    Notification.requestPermission();
+}
+
+// Challenge Functions
+let challengeActive = false;
+let challengeProgress = 0;
+let challengeCheckCount = 0;
+const challengeGoal = 5; // Complete 5 posture checks
+
+function startChallenge() {
+    challengeActive = true;
+    challengeProgress = 0;
+    challengeCheckCount = 0;
+    window.lastAllChecked = false;
+    
+    const challengeButton = document.getElementById('challengeButton');
+    const challengeProgressEl = document.getElementById('challengeProgress');
+    const challengeGoalEl = document.getElementById('challengeGoal');
+    const challengeBar = document.getElementById('challengeBar');
+    const challengeText = document.getElementById('challengeText');
+    
+    challengeButton.style.display = 'none';
+    challengeProgressEl.style.display = 'block';
+    challengeGoalEl.textContent = `Complete ${challengeGoal} perfect posture checks`;
+    challengeText.textContent = 'Challenge started! Check off all items 5 times to complete!';
+    challengeBar.style.width = '0%';
+    
+    // Create challenge tracking function
+    window.trackChallengeProgress = function() {
+        if (!challengeActive) return;
+        
+        let allChecked = true;
+        for (let i = 1; i <= 5; i++) {
+            if (!document.getElementById(`check${i}`).checked) {
+                allChecked = false;
+                break;
+            }
+        }
+        
+        if (allChecked) {
+            // Only increment if this is a new complete check (not already counted)
+            if (!window.lastAllChecked) {
+                challengeCheckCount++;
+                window.lastAllChecked = true;
+                challengeProgress = (challengeCheckCount / challengeGoal) * 100;
+                challengeBar.style.width = Math.min(challengeProgress, 100) + '%';
+                
+                if (challengeCheckCount >= challengeGoal) {
+                    challengeActive = false;
+                    challengeText.textContent = '🎉 Challenge Complete! You\'re a posture master!';
+                    challengeText.style.color = '#ffd700';
+                    challengeText.style.fontWeight = 'bold';
+                } else {
+                    challengeText.textContent = `Great! ${challengeCheckCount}/${challengeGoal} perfect checks completed!`;
+                }
+            }
+        } else {
+            window.lastAllChecked = false;
+        }
+    };
+}
+
 
 // Auto-update stats (gradual decrease over time)
 setInterval(() => {
