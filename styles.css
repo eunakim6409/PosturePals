@@ -38,7 +38,7 @@ body {
 header {
     background: rgba(168, 230, 207, 0.9);
     color: var(--text-dark);
-    padding: 2rem 0;
+    padding: 1.2rem 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: sticky;
@@ -48,14 +48,54 @@ header {
     backdrop-filter: blur(10px);
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-characters {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-char {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.sway-left {
+    animation: swayLeft 3s ease-in-out infinite;
+}
+
+.sway-right {
+    animation: swayRight 3s ease-in-out infinite;
+}
+
+@keyframes swayLeft {
+    0%, 100% { transform: translateX(0) rotate(0deg); }
+    25% { transform: translateX(-8px) rotate(-5deg); }
+    75% { transform: translateX(8px) rotate(5deg); }
+}
+
+@keyframes swayRight {
+    0%, 100% { transform: translateX(0) rotate(0deg); }
+    25% { transform: translateX(8px) rotate(5deg); }
+    75% { transform: translateX(-8px) rotate(-5deg); }
+}
+
 .logo {
     font-family: 'VT323', monospace;
     font-size: 3.5rem;
     font-weight: normal;
-    margin-bottom: 0.5rem;
     text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
     animation: bounce 2s infinite;
     letter-spacing: 3px;
+    margin: 0;
 }
 
 @keyframes bounce {
@@ -76,7 +116,7 @@ nav {
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
-    top: 120px;
+    top: 90px;
     z-index: 999;
     border-bottom: 2px solid rgba(255, 170, 165, 0.5);
     backdrop-filter: blur(5px);
@@ -200,6 +240,11 @@ nav a:hover {
     margin-bottom: 1rem;
     line-height: 1.4;
     letter-spacing: 2px;
+}
+
+.hero-text h2 strong {
+    font-family: 'VT323', monospace;
+    font-weight: normal;
 }
 
 .hero-text p {
@@ -489,6 +534,7 @@ nav a:hover {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    align-items: stretch;
 }
 
 .data-card-link {
@@ -509,6 +555,11 @@ nav a:hover {
     border: 2px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
     cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 200px;
 }
 
 .data-card-link:hover .data-card {
