@@ -20,12 +20,15 @@
 }
 
 body {
-    font-family: 'Press Start 2P', cursive;
-    line-height: 1.8;
+    font-family: 'VT323', monospace;
+    line-height: 1.6;
     color: var(--text-dark);
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #f5f5f5;
     background-attachment: fixed;
-    font-size: 12px;
+    font-size: 22px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
 }
 
 .container {
@@ -36,23 +39,24 @@ body {
 
 /* Header Styles */
 header {
-    background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-purple) 100%);
+    background: #4a90e2;
     color: var(--text-light);
     padding: 2rem 0;
     text-align: center;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 4px solid #2c5aa0;
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 3.5rem;
     font-weight: normal;
     margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
     animation: bounce 2s infinite;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 @keyframes bounce {
@@ -61,19 +65,20 @@ header {
 }
 
 .tagline {
-    font-size: 0.7rem;
+    font-size: 1.5rem;
     opacity: 0.95;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 /* Navigation */
 nav {
-    background: rgba(255, 255, 255, 0.95);
+    background: #ffffff;
     padding: 1rem 0;
-    box-shadow: var(--shadow);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 120px;
     z-index: 999;
+    border-bottom: 2px solid #e0e0e0;
 }
 
 nav .container {
@@ -93,22 +98,24 @@ nav a {
     text-decoration: none;
     font-weight: normal;
     padding: 0.5rem 1rem;
-    border-radius: 20px;
+    border-radius: 0;
     transition: all 0.3s ease;
-    font-size: 0.7rem;
+    font-size: 1.3rem;
     letter-spacing: 1px;
+    border: 2px solid transparent;
 }
 
 nav a:hover {
-    background: var(--primary-pink);
+    background: #4a90e2;
     color: var(--text-light);
+    border-color: #2c5aa0;
     transform: translateY(-2px);
 }
 
 /* Hero Section */
 .hero {
     padding: 4rem 0;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: #ffffff;
 }
 
 .hero-content {
@@ -185,19 +192,19 @@ nav a:hover {
 }
 
 .hero-text h2 {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     color: var(--text-dark);
     margin-bottom: 1rem;
-    line-height: 1.6;
-    letter-spacing: 1px;
+    line-height: 1.4;
+    letter-spacing: 2px;
 }
 
 .hero-text p {
-    font-size: 0.7rem;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
-    color: #555;
-    line-height: 1.8;
-    letter-spacing: 0.5px;
+    color: #333;
+    line-height: 1.6;
+    letter-spacing: 1px;
 }
 
 .cta-button {
@@ -211,42 +218,42 @@ nav a:hover {
     cursor: pointer;
     box-shadow: var(--shadow-lg);
     transition: all 0.3s ease;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'VT323', monospace;
     letter-spacing: 1px;
 }
 
 .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
 }
 
 /* Section Styles */
 .section {
     padding: 4rem 0;
-    background: var(--light-bg);
+    background: #ffffff;
 }
 
 .dark-section {
-    background: var(--dark-bg);
+    background: #2c3e50;
     color: var(--text-light);
 }
 
 .section-title {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 1rem;
     color: inherit;
-    letter-spacing: 2px;
-    line-height: 1.6;
+    letter-spacing: 3px;
+    line-height: 1.4;
 }
 
 .section-subtitle {
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 1.4rem;
     margin-bottom: 3rem;
     opacity: 0.9;
-    letter-spacing: 1px;
-    line-height: 1.8;
+    letter-spacing: 2px;
+    line-height: 1.6;
 }
 
 /* Cards Grid */
@@ -260,10 +267,10 @@ nav a:hover {
 .info-card {
     background: var(--card-bg);
     padding: 2rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
+    border-radius: 0;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    border: 3px solid transparent;
+    border: 3px solid #333;
 }
 
 .info-card:hover {
@@ -278,18 +285,18 @@ nav a:hover {
 }
 
 .info-card h3 {
-    color: var(--primary-purple);
+    color: #4a90e2;
     margin-bottom: 1rem;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    line-height: 1.6;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    line-height: 1.4;
 }
 
 .info-card p {
-    color: #666;
-    line-height: 2;
-    font-size: 0.65rem;
-    letter-spacing: 0.5px;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
 }
 
 .dark-section .info-card {
@@ -311,10 +318,11 @@ nav a:hover {
 
 .example-card {
     background: var(--card-bg);
-    border-radius: 20px;
+    border-radius: 0;
     overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    transition: all 0.3s ease;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    border: 3px solid #333;
 }
 
 .example-card:hover {
@@ -344,10 +352,12 @@ nav a:hover {
     top: 10px;
     right: 10px;
     padding: 0.5rem 1rem;
-    border-radius: 20px;
+    border-radius: 0;
     font-weight: normal;
-    font-size: 0.6rem;
-    letter-spacing: 0.5px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border: 2px solid #333;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 .badge.bad {
@@ -362,19 +372,19 @@ nav a:hover {
 
 .example-card h3 {
     padding: 1rem 1.5rem 0.5rem;
-    color: var(--primary-purple);
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    line-height: 1.6;
+    color: #4a90e2;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    line-height: 1.4;
 }
 
 .example-card p {
     padding: 0 1.5rem;
     margin-bottom: 0.5rem;
-    color: #666;
-    line-height: 1.8;
-    font-size: 0.65rem;
-    letter-spacing: 0.5px;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
 }
 
 .example-card p:last-child {
@@ -402,13 +412,14 @@ nav a:hover {
 }
 
 .character-card {
-    background: linear-gradient(135deg, var(--primary-pink), var(--primary-purple));
+    background: #4a90e2;
     padding: 2rem;
-    border-radius: 20px;
+    border-radius: 0;
     text-align: center;
-    box-shadow: var(--shadow-lg);
-    transition: all 0.3s ease;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
     color: var(--text-light);
+    border: 3px solid #2c5aa0;
 }
 
 .character-card:hover {
@@ -428,32 +439,32 @@ nav a:hover {
 }
 
 .character-card h3 {
-    font-size: 0.9rem;
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .character-type {
     font-style: normal;
     opacity: 0.9;
     margin-bottom: 1rem;
-    font-size: 0.6rem;
-    letter-spacing: 0.5px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
 }
 
 .character-card p {
     margin-bottom: 1rem;
-    line-height: 2;
-    font-size: 0.65rem;
-    letter-spacing: 0.5px;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
 }
 
 .character-stats {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    font-size: 0.6rem;
-    letter-spacing: 0.5px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
 }
 
 /* Data Grid */
@@ -480,25 +491,25 @@ nav a:hover {
 }
 
 .data-number {
-    font-size: 2rem;
+    font-size: 3.5rem;
     font-weight: normal;
-    color: var(--primary-yellow);
+    color: #ffd700;
     margin-bottom: 0.5rem;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 .data-unit {
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 1rem;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .data-description {
-    font-size: 0.65rem;
-    line-height: 1.8;
-    color: rgba(255, 255, 255, 0.9);
-    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+    letter-spacing: 1px;
 }
 
 /* Game Section */
@@ -511,19 +522,20 @@ nav a:hover {
 }
 
 .tamagotchi-device {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 30px;
+    background: #4a90e2;
+    border-radius: 0;
     padding: 2rem;
-    box-shadow: var(--shadow-lg);
-    border: 10px solid #333;
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
+    border: 4px solid #2c5aa0;
 }
 
 .device-screen {
-    background: #fff;
-    border-radius: 15px;
+    background: #e8f4f8;
+    border-radius: 0;
     padding: 1.5rem;
     margin-bottom: 1rem;
     min-height: 300px;
+    border: 3px solid #333;
 }
 
 .character-display {
@@ -554,10 +566,10 @@ nav a:hover {
 }
 
 .device-stat span {
-    font-size: 0.6rem;
-    color: #666;
+    font-size: 1.1rem;
+    color: #333;
     font-weight: normal;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 .stat-bar-small {
@@ -568,19 +580,20 @@ nav a:hover {
 }
 
 .device-message {
-    background: #f0f0f0;
+    background: #ffffff;
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: 0;
     text-align: center;
     font-style: normal;
-    color: #555;
+    color: #333;
     min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.65rem;
-    letter-spacing: 0.5px;
-    line-height: 1.8;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    border: 2px solid #333;
 }
 
 .device-buttons {
@@ -598,14 +611,15 @@ nav a:hover {
     font-weight: normal;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'VT323', monospace;
     font-size: 0.6rem;
     letter-spacing: 0.5px;
 }
 
 .device-btn:hover {
-    background: var(--primary-purple);
-    transform: scale(1.05);
+    background: #5aa0f2;
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
 .device-btn:active {
@@ -620,10 +634,10 @@ nav a:hover {
 }
 
 .game-info h3 {
-    color: var(--primary-purple);
+    color: #4a90e2;
     margin-bottom: 1rem;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
 }
 
 .game-instructions {
@@ -633,11 +647,11 @@ nav a:hover {
 
 .game-instructions li {
     padding: 0.8rem 0;
-    border-bottom: 1px solid #eee;
-    color: #666;
-    line-height: 2;
-    font-size: 0.65rem;
-    letter-spacing: 0.5px;
+    border-bottom: 2px solid #ddd;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
 }
 
 .posture-tips {
@@ -647,10 +661,10 @@ nav a:hover {
 }
 
 .posture-tips h4 {
-    color: var(--primary-purple);
+    color: #4a90e2;
     margin-bottom: 1rem;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
 }
 
 .posture-tips ul {
@@ -659,27 +673,27 @@ nav a:hover {
 
 .posture-tips li {
     padding: 0.5rem 0;
-    color: #555;
-    font-size: 0.65rem;
-    letter-spacing: 0.5px;
-    line-height: 1.8;
+    color: #333;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    line-height: 1.6;
 }
 
 /* Footer */
 footer {
-    background: var(--dark-bg);
+    background: #2c3e50;
     color: var(--text-light);
     text-align: center;
     padding: 2rem 0;
-    font-size: 0.65rem;
-    letter-spacing: 0.5px;
-    line-height: 1.8;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    line-height: 1.6;
 }
 
 .footer-note {
     margin-top: 0.5rem;
     opacity: 0.8;
-    font-size: 0.6rem;
+    font-size: 1.1rem;
 }
 
 /* Responsive Design */
@@ -731,11 +745,11 @@ html {
     color: white;
     border: none;
     padding: 0.6rem 1.2rem;
-    border-radius: 20px;
+    border-radius: 0;
     cursor: pointer;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 0.6rem;
-    letter-spacing: 0.5px;
+    font-family: 'VT323', monospace;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
     transition: all 0.3s ease;
     box-shadow: var(--shadow);
 }
@@ -755,7 +769,7 @@ html {
     padding: 0.5rem 1rem;
     border-radius: 10px;
     cursor: pointer;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'VT323', monospace;
     font-size: 0.5rem;
     letter-spacing: 0.5px;
     z-index: 10;
@@ -764,9 +778,10 @@ html {
 }
 
 .edit-btn:hover {
-    background: var(--primary-pink);
+    background: #4a90e2;
     color: white;
-    transform: scale(1.1);
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
 .character-avatar-container {
@@ -803,7 +818,7 @@ html {
     overflow-y: auto;
     box-shadow: var(--shadow-lg);
     color: var(--text-light);
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'VT323', monospace;
 }
 
 .close-modal {
@@ -822,9 +837,9 @@ html {
 }
 
 .modal-content h2 {
-    font-size: 1rem;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     color: var(--text-light);
 }
 
@@ -849,8 +864,8 @@ html {
 }
 
 .form-group label {
-    font-size: 0.6rem;
-    letter-spacing: 0.5px;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
     color: var(--text-light);
     opacity: 0.9;
 }
@@ -859,12 +874,12 @@ html {
 .form-group textarea,
 .form-group select {
     padding: 0.8rem;
-    border-radius: 10px;
+    border-radius: 0;
     border: 3px solid #333;
     background: rgba(255, 255, 255, 0.95);
     color: var(--text-dark);
-    font-family: 'Press Start 2P', cursive;
-    font-size: 0.6rem;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
     letter-spacing: 0.5px;
     resize: vertical;
 }
@@ -878,10 +893,10 @@ html {
 }
 
 .form-group small {
-    font-size: 0.5rem;
+    font-size: 1rem;
     opacity: 0.8;
     color: var(--text-light);
-    letter-spacing: 0.3px;
+    letter-spacing: 1px;
 }
 
 .form-group img {
